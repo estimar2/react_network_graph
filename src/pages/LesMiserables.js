@@ -107,6 +107,12 @@ function LesMiserables(props) {
       dragNodes: false,
     },
     physics: {
+      forceAtlas2Based: {
+        gravitationalConstant: -26,
+        centralGravity: 0.005,
+        springLength: 230,
+        springConstant: 0.18,
+      },
       hierarchicalRepulsion: {
         centralGravity: 0,
       },
