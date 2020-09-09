@@ -31,6 +31,12 @@ function LesMiserables(props) {
       { id: 23, label: "24", group: 12 },
       { id: 24, label: "25", group: 13 },
       { id: 25, label: "26", group: 13 },
+      { id: 26, label: "27", group: 14 },
+      { id: 27, label: "28", group: 14 },
+      { id: 28, label: "29", group: 15 },
+      { id: 29, label: "30", group: 15 },
+      { id: 30, label: "31", group: 16 },
+      { id: 31, label: "32", group: 16 },
     ],
     edges: [
       { to: 0, from: 1 },
@@ -59,6 +65,12 @@ function LesMiserables(props) {
       { to: 13, from: 23 },
       { to: 14, from: 24 },
       { to: 15, from: 25 },
+      { to: 0, from: 26 },
+      { to: 0, from: 27 },
+      { to: 0, from: 28 },
+      { to: 0, from: 29 },
+      { to: 0, from: 30 },
+      { to: 0, from: 31 },
     ],
   };
 
@@ -66,7 +78,6 @@ function LesMiserables(props) {
     nodes: {
       borderWidth: 0,
       borderWidthSelected: 0,
-      opacity: 1,
       fixed: {
         x: true,
         y: true,
@@ -80,27 +91,24 @@ function LesMiserables(props) {
       color: {
         inherit: "to",
       },
-      selfReferenceSize: null,
-      selfReference: {
-        angle: 0.7853981633974483,
-      },
       smooth: false,
     },
-    layout: {
-      hierarchical: {
-        enabled: true,
-        levelSeparation: -150,
-        direction: "DU",
-        sortMethod: "directed",
-      },
-    },
+    // layout: {
+    //   hierarchical: {
+    //     enabled: true,
+    //     levelSeparation: -150,
+    //     nodeSpacing: 255,
+    //     treeSpacing: 400,
+    //     direction: "DU",
+    //     sortMethod: "directed",
+    //   },
+    // },
     interaction: {
       dragNodes: false,
     },
     physics: {
       hierarchicalRepulsion: {
         centralGravity: 0,
-        avoidOverlap: null,
       },
       minVelocity: 0.75,
       solver: "hierarchicalRepulsion",
