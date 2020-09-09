@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Home, BasicUsage, LesMiserables } from "./pages";
+import { Home, BasicUsage, LesMiserables, Sample } from "./pages";
+import "./style.css";
 
 class App extends React.Component {
   render() {
@@ -8,8 +9,8 @@ class App extends React.Component {
       <>
         <Router>
           <div>
-            <nav>
-              <ul>
+            <div className="header">
+              <ul className="nav">
                 <li>
                   <Link to="/">Main</Link>
                 </li>
@@ -19,12 +20,16 @@ class App extends React.Component {
                 <li>
                   <Link to="/LesMiserables">LesMiserables</Link>
                 </li>
+                <li>
+                  <Link to="/Sample">Sample</Link>
+                </li>
               </ul>
-            </nav>
+            </div>
 
             <Route exact path="/" component={Home} />
             <Route exact path="/BasicUsage" component={BasicUsage} />
             <Route exact path="/LesMiserables" component={LesMiserables} />
+            <Route exact path="/Sample" component={Sample} />
           </div>
         </Router>
       </>

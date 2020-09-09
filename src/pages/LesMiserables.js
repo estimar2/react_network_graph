@@ -1,6 +1,7 @@
 import React from "react";
 import Graph from "react-graph-vis";
 
+// by react-graph-vis
 function LesMiserables(props) {
   const graph = {
     nodes: [
@@ -81,7 +82,6 @@ function LesMiserables(props) {
 
   const events = {
     select: function (event) {
-      var newGroup = graph.nodes.group;
       var { nodes, edges } = event;
 
       console.log(events.graph);
@@ -89,8 +89,6 @@ function LesMiserables(props) {
       console.log(nodes);
       console.log("Selected edges : ");
       console.log(edges);
-      console.log("Selected group : ");
-      console.log(newGroup);
     },
   };
 
